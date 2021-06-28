@@ -1,0 +1,161 @@
+:root {
+    --white: #FFF;
+    --bgColor: #083358;
+    --divsColor: #Cb3B3B;
+    --divImgColor: #FF9F68;
+    --mouseOptionBgColor: #333644;
+    --dividerColor: #656D78;
+    --h1Color: #FFF9D6;
+    --pColor: #FFCE54;
+    --aColor: #FC6E51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: var(--bgColor);
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    padding-top: 270px;
+}
+
+.div-open-data, .div-close-data {
+    color: var(--divsColor);
+    font-size: 2rem;
+}
+
+.div-img {
+    padding: 20px 0;
+}
+
+.div-img-data {
+    margin-left: 50px;
+    color: var(--divImgColor);
+    font-size: 2rem;
+}
+
+.div-open-cursor, .div-close-cursor, .div-img-cursor {
+    color: var(--white);
+    animation: blink .4s ease infinite;
+    opacity: 0;
+    font-size: 2rem;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+.mouse-animation img {
+    width: 50px;
+    height: 30px;
+    transform: rotate(270deg) translate(-230px, 400px);
+    opacity: 0;
+    animation: move 5s ease forwards;
+}
+
+@keyframes move {
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(270deg) translate(-20px, 100px);
+    }
+}
+
+@keyframes move2 {
+    from {
+        opacity: 1;
+        transform: rotate(270deg) translate(-20px, 100px);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(270deg) translate(-30px, 200px);
+    }
+}
+
+.mouse-options {
+    max-width: 300px;
+    background-color: var(--mouseOptionBgColor);
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.25);
+    margin-left: 120px;
+    margin-top: -10px;
+    opacity: 0;
+}
+
+.mouse-options p {
+    color: var(--white);
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.divider {
+    border: 1px solid var(--dividerColor);
+    height: 1px;
+    display: block;
+    background-color: var(--dividerColor);
+}
+
+.error-page {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.error-page h1 {
+    line-height: 1em;
+    color: var(--h1Color);
+    font-weight: bold;
+    font-size: 16.675rem;
+    text-shadow: 0px 0px 0 rgb(236, 236, 236), 0px 1px 0 rgb(228, 228, 228),
+    0px 2px 0 rgb(219, 219, 219), 0px 3px 0 rgb(211, 211, 211),
+    0px 4px 0 rgb(202, 202, 202), 0px 5px 0 rgb(193, 193, 193),
+    0px 6px 0 rgb(185, 185, 185), 0px 7px 0 rgb(176, 176, 176),
+    0px 8px 0 rgb(168, 168, 168), 0px 9px 0 rgb(159, 159, 159),
+    0px 10px 0 rgb(150, 150, 150), 0px 11px 0 rgb(142, 142, 142),
+    0px 12px 0 rgb(133, 133, 133), 0px 13px 0 rgb(125, 125, 125),
+    0px 14px 0 rgb(116, 116, 116), 0px 15px 0 rgb(107, 107, 107),
+    0px 16px 15px rgba(0, 0, 0, 1), 0px 16px 1px rgba(0, 0, 0, 0.5),
+    0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+.error-page p {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--pColor);
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.error-page a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--aColor);
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;    
+}
